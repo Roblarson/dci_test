@@ -1,0 +1,201 @@
+tests:
+
+  - title: vNet Connection Failure remote region.
+
+    prerequisites: vNet connected to both ExpressRoute circuits, Access to Azure Portal or Azure PowerShell.
+
+    action: Delete or disable a vNet connection to the local region ER circuit.
+
+    actionBy: Microsoft.
+
+    additionalResources: Starbucks.
+
+    additionalActions: Verify packets are flowing across the remote ER circuit.
+
+    expectedOutcome: Traffic will continue to flow over vNet connection to the remote ER circuit.
+
+    measurement: Successful continuous Ping to on premises VM.
+
+    dateTime: This is the date and time of the test in ISO 8601 format.
+
+    actualOutcome: This is the acutal outcome of the test.
+
+    passFail: Pass or Fail.
+
+    remediation: Steps to remediate.
+
+
+  - title: vNet Connection Failure local region.
+
+    prerequisites: vNet connected to both ExpressRoute circuits, Access to Azure Portal or Azure PowerShell.
+
+    action: Delete or disable a vNet connection to the remote region ER circuit.
+
+    actionBy: Microsoft.
+
+    additionalResources: Starbucks.
+
+    additionalActions: Verify packets are flowing across the local region ER circuit.
+
+    expectedOutcome: Traffic will continue to flow over vNet connection to the local ER circuit.
+
+    measurement: Successful continuous Ping to on premises VM.
+
+    dateTime: This is the date and time of the test in ISO 8601 format.
+
+    actualOutcome: This is the acutal outcome of the test.
+
+    passFail: Pass or Fail.
+
+    remediation: Steps to remediate.
+
+
+  - title: Validate BGP Local preference is configured correctly for East Region.
+
+    prerequisites: vNet connected to both ExpressRoute circuits, Access to Azure Portal or Azure PowerShell.
+
+    action: From on premises VM in Chandler, attempt to RDP or ssh to remote VM in East region.
+
+    actionBy: Microsoft or Starbucks.
+
+    additionalResources: Starbucks.
+
+    additionalActions: Verify packets are flowing across the Starbucks backbone to the East region ER circuit.
+
+    expectedOutcome: Traffic will flow across the East region circuit.
+
+    measurement: Successful continuous Ping to on premises VM.
+
+    dateTime: This is the date and time of the test in ISO 8601 format.
+
+    actualOutcome: This is the acutal outcome of the test.
+
+    passFail: Pass or Fail.
+
+    remediation: Steps to remediate.
+
+
+  - title: Validate BGP Local preference is configured correctly for West Region.
+
+    prerequisites: vNet connected to both ExpressRoute circuits, Access to Azure Portal or Azure PowerShell.
+
+    action: From on premises VM in Ashburn attempt to RDP or ssh to remote VM in West region.
+
+    actionBy: Microsoft or Starbucks.
+
+    additionalResources: Starbucks.
+
+    additionalActions: Verify packets are flowing across the Starbucks backbone to the West region ER circuit.
+
+    expectedOutcome: Traffic will flow across the West region circuit.
+
+    measurement: Successful continuous Ping to on premises VM.
+
+    dateTime: This is the date and time of the test in ISO 8601 format.
+
+    actualOutcome: This is the acutal outcome of the test.
+
+    passFail: Pass or Fail.
+
+    remediation: Steps to remediate.
+
+
+
+  - title: Validate ExpressRoute Effective Route Table for East Circuit.
+
+    prerequisites: vNet connected to both ExpressRoute circuits, Access to Azure Portal or Azure PowerShell.
+
+    action: Retrieve Effective Route table for the East ExpressRoute circuit using PowerShell.
+
+    actionBy: Microsoft or Starbucks.
+
+    additionalResources: None.
+
+    additionalActions: None.
+
+    expectedOutcome: Route table is as expected for East ER circuit in current state.
+
+    measurement: All expected BGP routes are visible.
+
+    dateTime: This is the date and time of the test in ISO 8601 format.
+
+    actualOutcome: This is the acutal outcome of the test.
+
+    passFail: Pass or Fail.
+
+    remediation: Steps to remediate.
+
+
+  - title: Validate ExpressRoute Effective Route Table for West Circuit.
+
+    prerequisites: vNet connected to both ExpressRoute circuits, Access to Azure Portal or Azure PowerShell.
+
+    action: Retrieve Effective Route table for the West ExpressRoute circuit using PowerShell.
+
+    actionBy: Microsoft or Starbucks.
+
+    additionalResources: None.
+
+    additionalActions: None.
+
+    expectedOutcome: Route table is as expected for West ER circuit in current state.
+
+    measurement: All expected BGP routes are visible.
+
+    dateTime: This is the date and time of the test in ISO 8601 format.
+
+    actualOutcome: This is the acutal outcome of the test.
+
+    passFail: Pass or Fail.
+
+    remediation: Steps to remediate.
+
+
+  - title: Validate ExpressRoute Circuit Stats are retrievable for West ER Circuit.
+
+    prerequisites: vNet connected to both ExpressRoute circuits, Access to Azure Portal or Azure PowerShell.
+
+    action: Retrieve Circuit stats for the West ExpressRoute circuit using PowerShell.
+
+    actionBy: Microsoft or Starbucks.
+
+    additionalResources: None.
+
+    additionalActions: None.
+
+    expectedOutcome: Circuit stats show traffic flowing across the West ExpressRoute circuit.
+
+    measurement: Valid circuit statistics for .
+
+    dateTime: This is the date and time of the test in ISO 8601 format.
+
+    actualOutcome: This is the acutal outcome of the test.
+
+    passFail: Pass or Fail.
+
+    remediation: Steps to remediate.
+
+
+  - title: Validate ExpressRoute Circuit Stats are retrievable for East ER Circuit.
+
+    prerequisites: vNet connected to both ExpressRoute circuits, Access to Azure Portal or Azure PowerShell.
+
+    action: Retrieve Circuit stats for the East ExpressRoute circuit using PowerShell.
+
+    actionBy: Microsoft or Starbucks.
+
+    additionalResources: None.
+
+    additionalActions: None.
+
+    expectedOutcome: Circuit stats show traffic flowing across the East ExpressRoute circuit.
+
+    measurement: All expected BGP routes are visible.
+
+    dateTime: This is the date and time of the test in ISO 8601 format.
+
+    actualOutcome: This is the acutal outcome of the test.
+
+    passFail: Pass or Fail.
+
+    remediation: Steps to remediate.
